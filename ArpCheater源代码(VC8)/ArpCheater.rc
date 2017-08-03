@@ -1,0 +1,330 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ArpCheater.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ARPCHEATER_DIALOG DIALOGEX 0, 0, 495, 322
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+MENU IDR_MENU
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "网卡选择",IDC_STATIC,7,7,305,33
+    LTEXT           "网卡",IDC_STATIC,15,24,16,8
+    LTEXT           "本地MAC",IDC_STATIC,13,131,38,8
+    LTEXT           "网关IP",IDC_STATIC,13,149,35,8
+    LTEXT           "本地IP",IDC_STATIC,13,167,34,8
+    COMBOBOX        IDC_COMBOADAPTER,37,21,268,139,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDITLOCALMAC,51,128,100,14,ES_LOWERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITGATEIP,51,145,100,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITLOCALIP,51,164,100,14,ES_AUTOHSCROLL
+    LTEXT           "伪造MAC",IDC_STATIC,161,131,35,8
+    LTEXT           "网关MAC",IDC_STATIC,161,148,34,8
+    LTEXT           "子网掩码",IDC_STATIC,159,165,38,8
+    EDITTEXT        IDC_EDITFORGEMAC,199,129,105,14,ES_LOWERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITGATEMAC,199,145,105,14,ES_LOWERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITNETMASK,199,164,105,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "加载配置文件",IDC_BUTTONLOAD,178,185,61,14,BS_FLAT
+    PUSHBUTTON      "保存为配置文件",IDC_BUTTONSAVE,243,185,62,14,BS_FLAT | WS_DISABLED
+    PUSHBUTTON      "自动判断配置",IDC_BUTTONAUTO,110,185,64,14,BS_FLAT | WS_DISABLED
+    GROUPBOX        "历史记录",IDC_STATIC,7,41,134,71
+    CONTROL         "断开对方网络",IDC_RADIODISINTERNET,"Button",BS_AUTORADIOBUTTON | BS_FLAT | NOT WS_VISIBLE | WS_GROUP | WS_TABSTOP,217,282,60,10
+    LTEXT           "断开数据发送延迟",IDC_STATIC,247,215,63,8
+    EDITTEXT        IDC_SENDTI,248,229,36,14,ES_AUTOHSCROLL
+    LTEXT           "毫秒",IDC_STATIC,289,232,16,8
+    GROUPBOX        "目标计算机(断开) / 源地址(反网络管理工具)",IDC_STATIC,318,7,170,71
+    CONTROL         "一台计算机IP",IDC_RADIOONE,"Button",BS_AUTORADIOBUTTON | BS_FLAT | WS_GROUP | WS_TABSTOP,324,21,70,10
+    CONTROL         "从IP文件读取 ",IDC_RADIOFILE,"Button",BS_AUTORADIOBUTTON | BS_FLAT | WS_TABSTOP,324,40,67,10
+    EDITTEXT        IDC_EDITTCIP,394,19,81,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITTCFILE,393,37,82,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览IP文件位置",IDC_BUTTONBROWSEFILE,419,56,56,14,BS_FLAT
+    PUSHBUTTON      "保存网络中所有IP文件",IDC_BUTTONLISTALLIP,323,56,89,14,BS_FLAT
+    PUSHBUTTON      "检查网关MAC",IDC_BUTTONGETMAC,180,220,62,26,BS_FLAT
+    PUSHBUTTON      "保护本机到网关通信",IDC_BUTTONPROTECT,96,220,79,26,BS_FLAT
+    GROUPBOX        "控制",IDC_STATIC,7,204,306,56
+    PUSHBUTTON      "断开目标计算机网络",IDC_BUTTONSTART,12,220,79,26,BS_FLAT
+    CONTROL         "无线网卡",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,14,187,45,10
+    GROUPBOX        "反网络管理工具",IDC_STATIC,7,261,306,54
+    GROUPBOX        "信息窗口",IDC_STATIC,318,85,170,230
+    EDITTEXT        IDC_EDITINFO,321,94,158,189,ES_MULTILINE | WS_VSCROLL
+    PUSHBUTTON      "攻击",IDC_BUTTONREBOUND,152,275,50,32,BS_FLAT
+    EDITTEXT        IDC_EDITREBOUNDIP,61,275,86,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITREBOUNDMAC,61,293,86,14,ES_LOWERCASE | ES_AUTOHSCROLL
+    LTEXT           "攻击目标IP  ",IDC_STATIC,11,277,46,8
+    LTEXT           "攻击目标MAC  ",IDC_STATIC,11,295,50,8
+    LTEXT           "该功能只对使用网络监控及管理软件有效。可以让对方程序瘫痪。如果你要断开对方网络，请使用控制里面的断开目标计算机网络功能",IDC_STATIC,212,268,94,39
+    PUSHBUTTON      "清空信息显示",IDC_BUTTONCLEANINFO,321,288,158,20,BS_FLAT
+    GROUPBOX        "统计信息",IDC_STATIC,144,41,168,71
+    EDITTEXT        IDC_EDITEXISTCOMPUTER,149,52,122,55,ES_MULTILINE | ES_AUTOVSCROLL
+    PUSHBUTTON      "停止",IDC_BUTTONSTOPMONITOR,236,273,44,21,BS_FLAT | NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "启用",IDC_BUTTONSTARTMONITOR,269,270,44,21,BS_FLAT | NOT WS_VISIBLE | WS_DISABLED
+    GROUPBOX        "控制类设置",IDC_STATIC,7,116,305,88
+    LISTBOX         IDC_LISTIP,14,52,124,55,NOT LBS_NOTIFY | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "记录数据",IDC_CHECKRECORDARP,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | BS_MULTILINE | BS_FLAT | WS_TABSTOP,276,52,11,55
+    PUSHBUTTON      "查看数据",IDC_BUTTONSEEPACKET,292,52,11,55,BS_MULTILINE | BS_FLAT
+    PUSHBUTTON      "测试",IDC_BTNTEST,57,185,50,14,NOT WS_VISIBLE
+END
+
+IDD_DIALOGIPINPUT DIALOG  0, 0, 143, 144
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "信任IP输入"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,18,40,50,14
+    PUSHBUTTON      "取消",IDCANCEL,76,40,50,14
+    GROUPBOX        "IP地址",IDC_STATIC,7,7,129,130
+    CONTROL         "IPAddress2",IDC_IPADDRESSINPUT,"SysIPAddress32",WS_TABSTOP,21,19,100,15
+    LTEXT           "  这里可以填写你的IP地址或者是网关或者是合法网络管理软件的IP地址。\n当前工具只支持一个IP地址。\n  写入的IP不会被自动探测可疑电脑功能干扰。如果你在使用网络管理软件，你需要填写入自己的IP。",IDC_STATIC,17,60,111,70
+END
+
+IDD_DIALOGCONFIG DIALOG  0, 0, 229, 140
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "程序参数设置"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,89,107,50,14
+    PUSHBUTTON      "取消",IDCANCEL,139,107,50,14,NOT WS_VISIBLE
+    GROUPBOX        "程序参数",IDC_STATIC,7,7,215,123
+    CONTROL         "开机时自动启动",IDC_CHECKAUTORUN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,22,68,10
+    CONTROL         "禁用自动扫描防护(不保护整个局域网)",IDC_CHECKAUTOPROTECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,60,191,10
+    CONTROL         "自动启动后自动记录数据到文件",IDC_CHECKSTARTMINI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,41,120,10
+    LTEXT           "配置文件路径",IDC_STATIC,19,83,46,8,WS_DISABLED
+    EDITTEXT        IDC_EDITPATH,69,80,105,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "浏览",IDC_BUTTONBROWSE,181,80,32,14,WS_DISABLED
+END
+
+IDD_WELCOME_DIALOG DIALOG  0, 0, 207, 229
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HOHO系列工具"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,7,197,193,25
+    GROUPBOX        "使用注意事项",IDC_STATIC,7,7,193,182
+    EDITTEXT        IDC_EDITACCEPT,17,23,172,156,ES_MULTILINE | ES_WANTRETURN
+END
+
+IDD_DIALOGRECORD DIALOG  0, 0, 393, 279
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "可疑计算机信息"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "隐藏窗口",IDOK,7,258,50,14
+    EDITTEXT        IDC_EDITREC,7,7,379,245,ES_MULTILINE | ES_AUTOHSCROLL | WS_VSCROLL
+    PUSHBUTTON      "清空记录",IDC_BUTTONCLEAN,58,258,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,2,0,0
+ PRODUCTVERSION 3,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "Nov30th.Com"
+            VALUE "CompanyName", "Nov30th.Com"
+            VALUE "FileDescription", "HOHO`` ARP TOOL"
+            VALUE "FileVersion", "4,0,0,0"
+            VALUE "InternalName", "ArpCheater"
+            VALUE "LegalCopyright", "Copyright (C) 2007"
+            VALUE "OriginalFilename", "ArpTool.EXE"
+            VALUE "PrivateBuild", "1012"
+            VALUE "ProductName", "ArpCheater Application"
+            VALUE "ProductVersion", "4,0,0,0"
+            VALUE "SpecialBuild", "QZJ NetWork"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ARPCHEATER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 488
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 315
+    END
+
+    IDD_DIALOGIPINPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 136
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_DIALOGCONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_WELCOME_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 222
+    END
+
+    IDD_DIALOGRECORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 386
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 272
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAINFRAME           ICON                    "icon2.ico"
+IDI_ICON3               ICON                    "nofile.ico"
+IDI_ICON2               ICON                    "remove-file.ico"
+IDI_ICON                ICON                    "temp-file.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "程序"
+    BEGIN
+        MENUITEM "退出",                          ID_MENUITEMEXIT
+    END
+    POPUP "高级"
+    BEGIN
+        MENUITEM "信任IP",                        ID_MENUITEMTRUSTIP
+        MENUITEM "详细参数设置",                      ID_MENUITEMCONFIG
+        MENUITEM "启用附加功能",                      ID_MENUITEMMORE
+    END
+    MENUITEM "关于",                          ID_MENUITEMHELP
+    MENUITEM "帮助文件",                        ID_MENUITEM32777, GRAYED
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ArpCheater.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArpCheater", "ArpCheater.vcproj", "{D3EC2992-B142-4BEF-B0D6-23660A1F29AB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RemoteTest", "RemoteTest\RemoteTest.vcproj", "{DBF900B5-7BE4-4BB1-AB17-8990C929BE9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A252595-343A-4A85-B57A-990D10633696}"
+	ProjectSection(SolutionItems) = preProject
+		ArpCheater.vsmdi = ArpCheater.vsmdi
+		localtestrun.testrunconfig = localtestrun.testrunconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ArpCheater.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3EC2992-B142-4BEF-B0D6-23660A1F29AB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D3EC2992-B142-4BEF-B0D6-23660A1F29AB}.Debug|Win32.Build.0 = Debug|Win32
+		{D3EC2992-B142-4BEF-B0D6-23660A1F29AB}.Release|Win32.ActiveCfg = Release|Win32
+		{D3EC2992-B142-4BEF-B0D6-23660A1F29AB}.Release|Win32.Build.0 = Release|Win32
+		{DBF900B5-7BE4-4BB1-AB17-8990C929BE9B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DBF900B5-7BE4-4BB1-AB17-8990C929BE9B}.Debug|Win32.Build.0 = Debug|Win32
+		{DBF900B5-7BE4-4BB1-AB17-8990C929BE9B}.Release|Win32.ActiveCfg = Release|Win32
+		{DBF900B5-7BE4-4BB1-AB17-8990C929BE9B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
